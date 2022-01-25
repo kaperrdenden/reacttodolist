@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+.todo-header {
+  padding: 20px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+
+  font-size: 2.5rem;
+
+  background-color: rgb(196, 196, 196);
+  color: rgb(255, 255, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-body {
+  /* margin: 0 auto; */
+  /* width: 50%; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-body-shape {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  /* height: 50%; */
+  background-color: rgb(68, 68, 68);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-body-shape .todo-body-input {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-body-lists {
+  background-color: red;
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: cente r; */
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todolist-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blue;
+  /* background-color: red; */
 }
+/* .todolist-content {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+} */
