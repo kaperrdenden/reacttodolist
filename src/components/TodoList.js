@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoList = ({todolists,nextId,setTodolists }) => {
+const TodoList = ({todolists,nextId,setTodolists, onRemove }) => {
     return(
         <>
             {todolists.map((list,i)=>{
@@ -15,13 +15,9 @@ const TodoList = ({todolists,nextId,setTodolists }) => {
                     <button 
                         className="todolist-delete"
                         onClick={()=>{
-                            console.log(list.id);
-                            setTodolists( todolists.filter((todolist)=>{
-                                return list.id !== todolist.id
-                                // 참인걸 남기겠다.
-                            })) 
-                           
-                        }}    
+                            onRemove(list.id)
+                        }}        
+                            
                     >삭제</button>
                     <button className="todolist-modify">수정</button>
                 </div>

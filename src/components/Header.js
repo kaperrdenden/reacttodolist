@@ -1,14 +1,12 @@
 import React from "react";
 
-const Header = ({ children }) => {
+const Header = () => {
+
     return(
-            <>
+           
                 <header className="todo-header">
                  To do list
-                </header>
-                
-            </>
-
+                </header>   
     )
 }
 

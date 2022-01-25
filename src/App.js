@@ -10,13 +10,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header>
-
-      </Header>
+      <Header />
+      
       <TodoBody 
         nextId={nextId}
-      
-       />
+      />
     </div>
   );
 }
