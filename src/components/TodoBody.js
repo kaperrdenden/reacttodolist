@@ -1,8 +1,13 @@
 import React from "react";
+import { useRef, useState } from 'react';
 import TodoList from "./TodoList";
-const TodoBody = ({ nextId,todoInput, onChange,todolists,setTodolists,setTodoInput}) => {
-  
-    
+const TodoBody = ({ nextId}) => {
+    const [todoInput, setTodoInput] = useState('');
+    const [todolists, setTodolists] = useState([]);
+    const onChange = (e)=>{
+        setTodoInput(e.target.value);
+      }
+      
     return(
         <div className="todo-body">
             <main className="todo-body-shape">
