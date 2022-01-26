@@ -4,7 +4,7 @@ import TodoList from "./TodoList";
 const TodoBody = ({ nextId}) => {
     const [todoInput, setTodoInput] = useState('');
     const [todolists, setTodolists] = useState([]);
-
+    const focused = useRef('');
     const onChange = (e)=>{
 
         setTodoInput(e.target.value);
@@ -22,6 +22,7 @@ const TodoBody = ({ nextId}) => {
     
         setTodoInput('');
         nextId.current += 1;
+        focused.current.focus();
          
     }
     const onRemove = (clickedId) => {
@@ -43,7 +44,9 @@ const TodoBody = ({ nextId}) => {
                 <header className="todo-body-input">
                     <h3>무엇을 하시겠습니까?</h3>
                     <form onSubmit={onSubmit}>
-                        <input onChange={onChange} value={todoInput} />
+                        <input onChange={onChange} value={todoInput}
+                        ref={focused}
+                        />
                         <button>추가</button>
                     </form>
                 </header>
@@ -54,6 +57,7 @@ const TodoBody = ({ nextId}) => {
                         nextId={nextId}  
                         setTodolists={setTodolists}
                         onRemove={onRemove}
+                      
                     />
                 </ul>
            </main>
