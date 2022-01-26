@@ -28,9 +28,9 @@ const TodoBody = ({ nextId}) => {
     const onRemove = (clickedId) => {
 
 
-        const yesOrNo = window.prompt("삭제하겠습니까>");
+        // const yesOrNo = window.prompt("삭제하겠습니까>");
 
-        if(yesOrNo === '' || yesOrNo ){
+        if(window.confirm("삭제하시겠습니까?")){
             setTodolists( 
                 todolists.filter((list,i)=>{
                     return list.id !== clickedId
