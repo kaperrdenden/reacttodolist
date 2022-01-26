@@ -1,12 +1,12 @@
 import React from "react";
 
 const TodoList = ({todolists,nextId,setTodolists, onRemove }) => {
+ 
     return(
         <>
             {todolists.map((list,i)=>{
             return (
             <li className="todolist-list" key={i}>
-
                 <span className="todolist-todo">
                        {list.list}
                 </span>
