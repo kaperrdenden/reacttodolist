@@ -25,11 +25,17 @@ const TodoBody = ({ nextId}) => {
          
     }
     const onRemove = (clickedId) => {
-        setTodolists( 
-            todolists.filter((list,i)=>{
-                 return list.id !== clickedId
-        })
-        )
+
+
+        const yesOrNo = window.prompt("삭제하겠습니까>");
+
+        if(yesOrNo === '' || yesOrNo ){
+            setTodolists( 
+                todolists.filter((list,i)=>{
+                    return list.id !== clickedId
+            })
+            )
+    }
     }
     return(
         <div className="todo-body">
@@ -42,7 +48,7 @@ const TodoBody = ({ nextId}) => {
                     </form>
                 </header>
 
-                <ul className="todo-body-lists"> 
+                <ul className="todo-body-lists">
                     <TodoList
                         todolists={todolists}
                         nextId={nextId}  

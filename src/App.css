@@ -44,3 +44,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.todolist-buttons {
+  margin-left: 20px;
+}
+.todolist-buttons button {
+  color: red;
+}
